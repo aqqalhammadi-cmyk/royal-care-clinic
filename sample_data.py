@@ -14,7 +14,8 @@ NEXT_TUESDAY = "2026-11-03"
 def create_clinic():
     """Build the clinic and return it together with the main staff objects."""
     clinic = Clinic("Royal Care Clinic", "Khalifa City, Abu Dhabi",
-                    "+971 2 555 0100", "info@royalcare.ae", "www.royalcare.ae")
+                    "+971 2 555 0100 / +971 50 555 0199",
+                    "info@royalcare.ae", "www.royalcare.ae")
 
     # Departments (created by the clinic - composition)
     general = clinic.add_department("General Practice", "Sun-Thu 08:00-20:00")

@@ -131,6 +131,8 @@ class Patient(Person):
 
     def reschedule_appointment(self, old_appointment, new_appointment):
         """Move to a new slot: book the new one first, then cancel the old one."""
+        if old_appointment not in self.__appointments:
+            raise ValueError("You can only reschedule your own booked appointment.")
         self.book_appointment(new_appointment)
         self.cancel_appointment(old_appointment)
 

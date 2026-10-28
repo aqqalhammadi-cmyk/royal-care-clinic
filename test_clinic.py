@@ -156,6 +156,9 @@ class TestMakeAppointment(ClinicTest):
         self.assertEqual(new.get_status(), "BOOKED")
         self.assertTrue(old.is_available())
         self.assertEqual(self.aliyah.get_appointments(), [new])
+        other = self.dr_brown.get_available_slots()[0]
+        with self.assertRaises(ValueError):          # old slot is no longer hers
+            self.aliyah.reschedule_appointment(old, other)
 
 
 # ---------------- d. Visit recording and EMR ----------------
