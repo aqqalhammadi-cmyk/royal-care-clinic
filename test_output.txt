@@ -1,0 +1,41 @@
+test_cancel_appointment (test_clinic.TestCancellation.test_cancel_appointment) ... ok
+test_cannot_cancel_completed_visit (test_clinic.TestCancellation.test_cannot_cancel_completed_visit) ... ok
+test_add_and_remove_department (test_clinic.TestClinicInformation.test_add_and_remove_department) ... ok
+test_move_staff_to_other_department (test_clinic.TestClinicInformation.test_move_staff_to_other_department) ... ok
+test_retrieve_clinic_info (test_clinic.TestClinicInformation.test_retrieve_clinic_info) ... ok
+test_staff_and_doctors (test_clinic.TestClinicInformation.test_staff_and_doctors) ... ok
+test_staff_still_exist_when_department_closes (test_clinic.TestClinicInformation.test_staff_still_exist_when_department_closes)
+Aggregation: removing a department does not delete its staff. ... ok
+test_update_clinic_info (test_clinic.TestClinicInformation.test_update_clinic_info) ... ok
+test_insurance_and_copay (test_clinic.TestInvoice.test_insurance_and_copay) ... ok
+test_insurance_claim_and_card_payment (test_clinic.TestInvoice.test_insurance_claim_and_card_payment) ... ok
+test_invoice_total (test_clinic.TestInvoice.test_invoice_total) ... ok
+test_mobile_wallet_and_overpayment (test_clinic.TestInvoice.test_mobile_wallet_and_overpayment) ... ok
+test_no_insurance (test_clinic.TestInvoice.test_no_insurance) ... ok
+test_lab_order_completed (test_clinic.TestLabOrder.test_lab_order_completed) ... ok
+test_result_cannot_be_added_twice (test_clinic.TestLabOrder.test_result_cannot_be_added_twice) ... ok
+test_result_linked_to_patient_and_visit (test_clinic.TestLabOrder.test_result_linked_to_patient_and_visit) ... ok
+test_book_appointment (test_clinic.TestMakeAppointment.test_book_appointment) ... ok
+test_cannot_double_book (test_clinic.TestMakeAppointment.test_cannot_double_book) ... ok
+test_reschedule (test_clinic.TestMakeAppointment.test_reschedule) ... ok
+test_login (test_clinic.TestPatientAccount.test_login) ... ok
+test_patient_details_stored (test_clinic.TestPatientAccount.test_patient_details_stored) ... ok
+test_update_profile (test_clinic.TestPatientAccount.test_update_profile) ... ok
+test_username_must_be_unique (test_clinic.TestPatientAccount.test_username_must_be_unique) ... ok
+test_prescription_sent_to_pharmacy (test_clinic.TestPrescription.test_prescription_sent_to_pharmacy) ... ok
+test_aliyah_visit (test_clinic.TestScenarioAliyah.test_aliyah_visit) ... ok
+test_omar_visit (test_clinic.TestScenarioOmar.test_omar_visit) ... ok
+test_booked_slot_not_listed (test_clinic.TestSearchAppointments.test_booked_slot_not_listed) ... ok
+test_search_by_date (test_clinic.TestSearchAppointments.test_search_by_date) ... ok
+test_search_by_doctor (test_clinic.TestSearchAppointments.test_search_by_doctor) ... ok
+test_search_by_speciality (test_clinic.TestSearchAppointments.test_search_by_speciality) ... ok
+test_access_control (test_clinic.TestVisitRecording.test_access_control) ... ok
+test_attachment (test_clinic.TestVisitRecording.test_attachment) ... ok
+test_download_visit_summaries (test_clinic.TestVisitRecording.test_download_visit_summaries) ... ok
+test_record_linked_to_appointment (test_clinic.TestVisitRecording.test_record_linked_to_appointment) ... ok
+test_wrong_doctor_cannot_record (test_clinic.TestVisitRecording.test_wrong_doctor_cannot_record) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.002s
+
+OK
