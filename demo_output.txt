@@ -1,0 +1,137 @@
+
+============================================================
+CLINIC INFORMATION
+============================================================
+Royal Care Clinic
+  Address : Khalifa City, Abu Dhabi
+  Phone   : +971 2 555 0100
+  Email   : info@royalcare.ae
+  Website : www.royalcare.ae
+  Departments:
+    - General Practice (Sun-Thu 08:00-20:00) - 2 staff
+    - Paediatrics (Mon-Fri 09:00-17:00) - 1 staff
+    - Cardiology (Mon-Wed 08:00-15:00) - 1 staff
+    - Laboratory (Daily 07:00-19:00) - 1 staff
+    - Radiology (Mon-Fri 08:00-16:00) - 0 staff
+    - Pharmacy (Daily 08:00-22:00) - 0 staff
+
+Website updated to: www.royalcareclinic.ae
+
+Staff:
+  Dr. Brown | Doctor | General Practice | Mon-Fri 08:00-16:00 | General Practitioner
+  Fatima | Nurse | General Practice | Sun-Thu 08:00-16:00
+  Dr. Layla Haddad | Doctor | Paediatrics | Mon-Thu 09:00-17:00 | Paediatrician
+  Dr. Khalid | Doctor | Cardiology | Mon-Wed 08:00-15:00 | Cardiologist
+  Rahul | Lab Technician | Laboratory | Sun-Thu 07:00-15:00
+
+============================================================
+SCENARIO 1: Aliyah visits Dr. Brown
+============================================================
+Account created:
+Patient: Aliyah (ID: P001)
+  Date of birth     : 2001-03-14
+  Phone / Email     : 055 123 4567 / aliyah@email.com
+  Address           : Al Reem Island, Abu Dhabi
+  Emergency contact : Imran (brother) 055 765 4321
+  Insurance         : Daman (DMN-7788) - 80% coverage, co-pay AED 50
+  Allergies         : Penicillin
+  Medical history   : Mild asthma
+
+General Practitioner slots on 2026-11-02:
+  D001-1 | 2026-11-02 09:00 (30 min) | Dr. Brown | Patient: - | AVAILABLE
+  D001-2 | 2026-11-02 09:30 (30 min) | Dr. Brown | Patient: - | AVAILABLE
+  D001-3 | 2026-11-02 10:00 (30 min) | Dr. Brown | Patient: - | AVAILABLE
+  D001-4 | 2026-11-02 10:30 (30 min) | Dr. Brown | Patient: - | AVAILABLE
+
+Booked: D001-2 | 2026-11-02 09:30 (30 min) | Dr. Brown | Patient: Aliyah | BOOKED
+
+Appointment status : COMPLETED
+Prescription status: SENT TO PHARMACY
+Lab test status    : ORDERED
+Lab test status after results: COMPLETED
+
+Visit Summary - EMR-001
+Patient   : Aliyah
+Doctor    : Dr. Brown
+Date      : 2026-11-02 09:30
+Diagnosis : Tonsillitis
+Notes     : Sore throat and fever for 3 days
+Vitals    : {'Temp': '38.4 C', 'BP': '118/76', 'HR': 96}
+Prescriptions:
+  - Azithromycin 500 mg - Once a day for 3 days [SENT TO PHARMACY]
+  - Paracetamol 500 mg - Every 6 hours if needed [SENT TO PHARMACY]
+Lab orders:
+  - Complete Blood Count [COMPLETED] Result: WBC slightly high
+  - Strep A Test [COMPLETED] Result: Positive
+Attachments: None
+
+======================================================
+INVOICE INV-001  -  Royal Care Clinic
+Patient: Aliyah
+------------------------------------------------------
+Consultation - Dr. Brown                        300.00
+Lab test - Complete Blood Count                 120.00
+Lab test - Strep A Test                          90.00
+Medication - Azithromycin                        36.00
+Medication - Paracetamol                         15.00
+------------------------------------------------------
+Total                                           561.00
+Insurance pays                                  408.80
+Patient pays                                    152.20
+------------------------------------------------------
+Paid by Insurance claim (Daman)                 408.80
+Paid by Card (**** 4417)                        152.20
+Balance                                           0.00
+Status: PAID
+======================================================
+
+Visit summaries downloaded to aliyah_visit_summaries.txt
+
+============================================================
+SCENARIO 2: Omar visits Dr. Haddad
+============================================================
+Account created for Omar (no insurance)
+
+Free slots with Dr. Haddad: 5
+Booked      : D002-1 | 2026-11-02 10:00 (30 min) | Dr. Layla Haddad | Patient: Omar | BOOKED
+Rescheduled : D002-4 | 2026-11-03 09:30 (30 min) | Dr. Layla Haddad | Patient: Omar | BOOKED
+Old slot is free again: True
+Cancelled   : D002-5 | 2026-11-03 10:00 (30 min) | Dr. Layla Haddad | Patient: - | CANCELLED
+Upcoming appointments for Omar: 1
+
+Visit Summary - EMR-002
+Patient   : Omar
+Doctor    : Dr. Layla Haddad
+Date      : 2026-11-03 09:30
+Diagnosis : Ear infection
+Notes     : Pain in left ear
+Vitals    : {'Temp': '38.9 C', 'HR': 118}
+Prescriptions:
+  - Amoxicillin syrup 250 mg/5 ml - 7.5 ml twice a day [SENT TO PHARMACY]
+Lab orders:
+  - Ear pressure test [COMPLETED] Result: Fluid behind left eardrum
+Attachments: school_nurse_referral.pdf
+
+Access denied: Aliyah cannot view this record.
+
+======================================================
+INVOICE INV-002  -  Royal Care Clinic
+Patient: Omar
+------------------------------------------------------
+Consultation - Dr. Layla Haddad                 350.00
+Lab test - Ear pressure test                    150.00
+Medication - Amoxicillin syrup                   38.00
+Ear examination                                  60.00
+------------------------------------------------------
+Total                                           598.00
+Insurance pays                                    0.00
+Patient pays                                    598.00
+------------------------------------------------------
+Paid by Mobile wallet (Apple Pay)               598.00
+Balance                                           0.00
+Status: PAID
+======================================================
+
+============================================================
+END
+============================================================
